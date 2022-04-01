@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+
+.draggable {
+    position: absolute;
+    
+}
+
+.draggable.dragging {
+    /* display: none; */
+    /* opacity: 100; */
+}
+
+.gameSetupContainer {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%, -50%);
+}
+
+.setupShips {
+    width: 200px;
+}
+
+.setupShips h1 {
+    color: rgb(0, 228, 0);
+    text-shadow: 2px 2px black;
+    text-decoration: underline;
+}
+
+.setupShips #battleShip {
+    top: 125px;
+    height: auto;
+}
+
+.setupShips #cruiser {
+    top: 165px;
+}
+
+.setupShips #destroyer1 {
+    top: 205px;
+}
+
+.setupShips #destroyer2 {
+    top: 235px;
+}
+
+.setupShips #submarine1 {
+    top: 265px;
+}
+
+.setupShips #submarine2 {
+    top: 290px;
+}
+
+.xAxis {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    
+}
+
+.xAxis div {
+    padding-right: 7px;
+    margin: auto;
+    color: rgb(0, 255, 0);
+    font-size: 1.1rem;
+    text-shadow: 2px 2px black;
+}
+
+.yAxis {
+    display: flex;
+}
+
+.yAxis div {
+    font-size: 1.1rem;
+    margin: auto;
+    color: rgb(0, 255, 0);
+    text-shadow: 2px 2px black;
+}
+
+.gridContainerSetup {
+
+    height: 350px;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(10, auto);
+    border: solid rgb(0, 0, 0) 2px;
+    background-color: rgba(14, 59, 0, 0.521);
+}
+
+.gridOne {
+    /* height: 20px;
+    width: 20px; */
+    border: solid rgb(0, 228, 0) 1px;
+}
+
+.btnReset {
+    align-self: center;
+    justify-self: center;
+    margin-left: 15px;
+}
+
+.btnReset button {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.btnPlay {
+    display: flex;
+    width: 100vw;
+    height: 25vh;
+    align-items: center;
+}
+
+.btnPlay button {
+    margin-left: 45%;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btnPlay button, .btnReset button, .playAgain {
+    background-color: rgba(14, 59, 0, 0.521);
+    color: rgb(0, 228, 0);
+    text-shadow: 2px 2px black;
+    border: solid rgb(0, 228, 0) 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnPlay button:hover, .btnReset button:hover, .playAgain:hover {
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+/* play game page */
+
+.gameBoardContainer {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 250ms ease-in;
+}
+
+.playerRadarGrid {
+    height: 200px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(10, auto);
+    border: solid rgb(0, 0, 0) 2px;
+    background-color: rgba(14, 59, 0, 0.521);
+}
+
+.mainRadarGrid {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(10, auto);
+    border: solid rgb(0, 0, 0) 2px;
+    background-color: rgba(14, 59, 0, 0.61);
+    cursor: crosshair;
+}
+
+
+.gridTwo {
+    /* height: 20px;
+    width: 20px; */
+    border: solid rgb(0, 228, 0) 0.1px;
+}
+
+.gridThree:hover {
+    background-color: rgba(255, 0, 0, 0.562);
+}
+
+.gridThree {
+    border: solid rgb(0, 255, 0) 1.5px;
+}
+
+.xAxisGame {
+    display: flex;
+    width: 200px;
+}
+
+.xAxisMain {
+    display: flex;
+    width: 400px;
+}
+
+.xAxisGame div, .yAxisGame div, .xAxisMain div, .yAxisMain div {
+    font-size: 1.1rem;
+    margin: auto;
+    color: rgb(0, 255, 0);
+    text-shadow: 2px 2px black;
+}
+
+.yAxisGame {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding-right: 5px;
+}
+
+.yAxisMain {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding-right: 5px;
+}
+
+.playerRadarContainer, .mainBoardContainer {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.mainBoardContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shipSunk, .gameOver {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 500px;
+    background-color: rgb(134, 134, 134);
+    color: rgb(0, 255, 0);
+    text-shadow: 2px 2px black;
+    background-color: rgba(65, 115, 156, 0.945);
+    border: solid rgb(0, 255, 0) 3px;
+    border-radius: 5px;
+}
+
+.shipSunk h1 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.shipSunk img {
+    margin-bottom: 50px;
+}
+
+.backgroundBlur {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(2, 3, 3, 0.884);
+}
+
+.playAgain {
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 600;
+}
+
+
+
+@keyframes fade {
+    from {opacity: 0.2} 
+    to {opacity: 1}
+  }

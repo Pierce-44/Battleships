@@ -4,11 +4,440 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Battleships</title>
 </head>
 <body>
-    
 
+    <div class="gameSetupContainer">
+        <div class="setupShips">
+            <h1>Your Ships</h1>
+            <img draggable="true" src="images/carrier.png" alt="" class="draggable" id="carrier">
+            <img draggable="true" src="images/battleShip.png" alt="" class="draggable" id="battleShip">
+            <img draggable="true" src="images/cruiser.png" alt="" class="draggable" id="cruiser">
+            <img draggable="true" src="images/destroyer.png" alt="" class="draggable" id="destroyer1">
+            <img draggable="true" src="images/destroyer.png" alt="" class="draggable" id="destroyer2">
+            <img draggable="true" src="images/submarine.png" alt="" class="draggable" id="submarine1">
+            <img draggable="true" src="images/submarine.png" alt="" class="draggable" id="submarine2">
+        </div>
+
+        <div class="xAxis">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+            <div>J</div>
+        </div>
+        <div class="gridOneContainer">
+            <div class="yAxis">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+            <div class="gridContainerSetup">
+                <div id="A1" class="gridOne"></div>
+                <div id="A2" class="gridOne"></div>
+                <div id="A3" class="gridOne"></div>
+                <div id="A4" class="gridOne"></div>
+                <div id="A5" class="gridOne"></div>
+                <div id="A6" class="gridOne"></div>
+                <div id="A7" class="gridOne"></div>
+                <div id="A8" class="gridOne"></div>
+                <div id="A9" class="gridOne"></div>
+                <div id="A10" class="gridOne"></div>
+                <div id="B1" class="gridOne"></div>
+                <div id="B2" class="gridOne"></div>
+                <div id="B3" class="gridOne"></div>
+                <div id="B4" class="gridOne"></div>
+                <div id="B5" class="gridOne"></div>
+                <div id="B6" class="gridOne"></div>
+                <div id="B7" class="gridOne"></div>
+                <div id="B8" class="gridOne"></div>
+                <div id="B9" class="gridOne"></div>
+                <div id="B10" class="gridOne"></div>
+                <div id="C1" class="gridOne"></div>
+                <div id="C2" class="gridOne"></div>
+                <div id="C3" class="gridOne"></div>
+                <div id="C4" class="gridOne"></div>
+                <div id="C5" class="gridOne"></div>
+                <div id="C6" class="gridOne"></div>
+                <div id="C7" class="gridOne"></div>
+                <div id="C8" class="gridOne"></div>
+                <div id="C9" class="gridOne"></div>
+                <div id="C10" class="gridOne"></div>
+                <div id="D1" class="gridOne"></div>
+                <div id="D2" class="gridOne"></div>
+                <div id="D3" class="gridOne"></div>
+                <div id="D4" class="gridOne"></div>
+                <div id="D5" class="gridOne"></div>
+                <div id="D6" class="gridOne"></div>
+                <div id="D7" class="gridOne"></div>
+                <div id="D8" class="gridOne"></div>
+                <div id="D9" class="gridOne"></div>
+                <div id="D10" class="gridOne"></div>
+                <div id="E1" class="gridOne"></div>
+                <div id="E2" class="gridOne"></div>
+                <div id="E3" class="gridOne"></div>
+                <div id="E4" class="gridOne"></div>
+                <div id="E5" class="gridOne"></div>
+                <div id="E6" class="gridOne"></div>
+                <div id="E7" class="gridOne"></div>
+                <div id="E8" class="gridOne"></div>
+                <div id="E9" class="gridOne"></div>
+                <div id="E10" class="gridOne"></div>
+                <div id="F1" class="gridOne"></div>
+                <div id="F2" class="gridOne"></div>
+                <div id="F3" class="gridOne"></div>
+                <div id="F4" class="gridOne"></div>
+                <div id="F5" class="gridOne"></div>
+                <div id="F6" class="gridOne"></div>
+                <div id="F7" class="gridOne"></div>
+                <div id="F8" class="gridOne"></div>
+                <div id="F9" class="gridOne"></div>
+                <div id="F10" class="gridOne"></div>
+                <div id="G1" class="gridOne"></div>
+                <div id="G2" class="gridOne"></div>
+                <div id="G3" class="gridOne"></div>
+                <div id="G4" class="gridOne"></div>
+                <div id="G5" class="gridOne"></div>
+                <div id="G6" class="gridOne"></div>
+                <div id="G7" class="gridOne"></div>
+                <div id="G8" class="gridOne"></div>
+                <div id="G9" class="gridOne"></div>
+                <div id="G10" class="gridOne"></div>
+                <div id="H1" class="gridOne"></div>
+                <div id="H2" class="gridOne"></div>
+                <div id="H3" class="gridOne"></div>
+                <div id="H4" class="gridOne"></div>
+                <div id="H5" class="gridOne"></div>
+                <div id="H6" class="gridOne"></div>
+                <div id="H7" class="gridOne"></div>
+                <div id="H8" class="gridOne"></div>
+                <div id="H9" class="gridOne"></div>
+                <div id="H10" class="gridOne"></div>
+                <div id="I1" class="gridOne"></div>
+                <div id="I2" class="gridOne"></div>
+                <div id="I3" class="gridOne"></div>
+                <div id="I4" class="gridOne"></div>
+                <div id="I5" class="gridOne"></div>
+                <div id="I6" class="gridOne"></div>
+                <div id="I7" class="gridOne"></div>
+                <div id="I8" class="gridOne"></div>
+                <div id="I9" class="gridOne"></div>
+                <div id="I10" class="gridOne"></div>
+                <div id="J1" class="gridOne"></div>
+                <div id="J2" class="gridOne"></div>
+                <div id="J3" class="gridOne"></div>
+                <div id="J4" class="gridOne"></div>
+                <div id="J5" class="gridOne"></div>
+                <div id="J6" class="gridOne"></div>
+                <div id="J7" class="gridOne"></div>
+                <div id="J8" class="gridOne"></div>
+                <div id="J9" class="gridOne"></div>
+                <div id="J10" class="gridOne"></div>
+            </div>
+        </div>
+        <div class="btnReset">
+            <button id="btnReset">RESET</button>
+        </div>
+    </div>
+    <div class="btnPlay">
+        <button id="btnPlay">PLAY</button>
+    </div>
+    <div class="gameBoardContainer">
+
+
+
+        <div class="playerRadarContainer">
+            <div class="yAxisGame">
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+                <div>D</div>
+                <div>E</div>
+                <div>F</div>
+                <div>G</div>
+                <div>H</div>
+                <div>I</div>
+                <div>J</div>
+            </div>
+
+            <div class="gridTwoContainer">
+                <div class="xAxisGame">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                </div>    
+                <div class="playerRadarGrid">
+                    <div id="A1" class="gridTwo"></div>
+                    <div id="A2" class="gridTwo"></div>
+                    <div id="A3" class="gridTwo"></div>
+                    <div id="A4" class="gridTwo"></div>
+                    <div id="A5" class="gridTwo"></div>
+                    <div id="A6" class="gridTwo"></div>
+                    <div id="A7" class="gridTwo"></div>
+                    <div id="A8" class="gridTwo"></div>
+                    <div id="A9" class="gridTwo"></div>
+                    <div id="A10" class="gridTwo"></div>
+                    <div id="B1" class="gridTwo"></div>
+                    <div id="B2" class="gridTwo"></div>
+                    <div id="B3" class="gridTwo"></div>
+                    <div id="B4" class="gridTwo"></div>
+                    <div id="B5" class="gridTwo"></div>
+                    <div id="B6" class="gridTwo"></div>
+                    <div id="B7" class="gridTwo"></div>
+                    <div id="B8" class="gridTwo"></div>
+                    <div id="B9" class="gridTwo"></div>
+                    <div id="B10" class="gridTwo"></div>
+                    <div id="C1" class="gridTwo"></div>
+                    <div id="C2" class="gridTwo"></div>
+                    <div id="C3" class="gridTwo"></div>
+                    <div id="C4" class="gridTwo"></div>
+                    <div id="C5" class="gridTwo"></div>
+                    <div id="C6" class="gridTwo"></div>
+                    <div id="C7" class="gridTwo"></div>
+                    <div id="C8" class="gridTwo"></div>
+                    <div id="C9" class="gridTwo"></div>
+                    <div id="C10" class="gridTwo"></div>
+                    <div id="D1" class="gridTwo"></div>
+                    <div id="D2" class="gridTwo"></div>
+                    <div id="D3" class="gridTwo"></div>
+                    <div id="D4" class="gridTwo"></div>
+                    <div id="D5" class="gridTwo"></div>
+                    <div id="D6" class="gridTwo"></div>
+                    <div id="D7" class="gridTwo"></div>
+                    <div id="D8" class="gridTwo"></div>
+                    <div id="D9" class="gridTwo"></div>
+                    <div id="D10" class="gridTwo"></div>
+                    <div id="E1" class="gridTwo"></div>
+                    <div id="E2" class="gridTwo"></div>
+                    <div id="E3" class="gridTwo"></div>
+                    <div id="E4" class="gridTwo"></div>
+                    <div id="E5" class="gridTwo"></div>
+                    <div id="E6" class="gridTwo"></div>
+                    <div id="E7" class="gridTwo"></div>
+                    <div id="E8" class="gridTwo"></div>
+                    <div id="E9" class="gridTwo"></div>
+                    <div id="E10" class="gridTwo"></div>
+                    <div id="F1" class="gridTwo"></div>
+                    <div id="F2" class="gridTwo"></div>
+                    <div id="F3" class="gridTwo"></div>
+                    <div id="F4" class="gridTwo"></div>
+                    <div id="F5" class="gridTwo"></div>
+                    <div id="F6" class="gridTwo"></div>
+                    <div id="F7" class="gridTwo"></div>
+                    <div id="F8" class="gridTwo"></div>
+                    <div id="F9" class="gridTwo"></div>
+                    <div id="F10" class="gridTwo"></div>
+                    <div id="G1" class="gridTwo"></div>
+                    <div id="G2" class="gridTwo"></div>
+                    <div id="G3" class="gridTwo"></div>
+                    <div id="G4" class="gridTwo"></div>
+                    <div id="G5" class="gridTwo"></div>
+                    <div id="G6" class="gridTwo"></div>
+                    <div id="G7" class="gridTwo"></div>
+                    <div id="G8" class="gridTwo"></div>
+                    <div id="G9" class="gridTwo"></div>
+                    <div id="G10" class="gridTwo"></div>
+                    <div id="H1" class="gridTwo"></div>
+                    <div id="H2" class="gridTwo"></div>
+                    <div id="H3" class="gridTwo"></div>
+                    <div id="H4" class="gridTwo"></div>
+                    <div id="H5" class="gridTwo"></div>
+                    <div id="H6" class="gridTwo"></div>
+                    <div id="H7" class="gridTwo"></div>
+                    <div id="H8" class="gridTwo"></div>
+                    <div id="H9" class="gridTwo"></div>
+                    <div id="H10" class="gridTwo"></div>
+                    <div id="I1" class="gridTwo"></div>
+                    <div id="I2" class="gridTwo"></div>
+                    <div id="I3" class="gridTwo"></div>
+                    <div id="I4" class="gridTwo"></div>
+                    <div id="I5" class="gridTwo"></div>
+                    <div id="I6" class="gridTwo"></div>
+                    <div id="I7" class="gridTwo"></div>
+                    <div id="I8" class="gridTwo"></div>
+                    <div id="I9" class="gridTwo"></div>
+                    <div id="I10" class="gridTwo"></div>
+                    <div id="J1" class="gridTwo"></div>
+                    <div id="J2" class="gridTwo"></div>
+                    <div id="J3" class="gridTwo"></div>
+                    <div id="J4" class="gridTwo"></div>
+                    <div id="J5" class="gridTwo"></div>
+                    <div id="J6" class="gridTwo"></div>
+                    <div id="J7" class="gridTwo"></div>
+                    <div id="J8" class="gridTwo"></div>
+                    <div id="J9" class="gridTwo"></div>
+                    <div id="J10" class="gridTwo"></div>
+                </div>
+            </div>     
+        </div>
+
+
+        <div class="mainBoardContainer">
+            <div class="yAxisMain">
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+                <div>D</div>
+                <div>E</div>
+                <div>F</div>
+                <div>G</div>
+                <div>H</div>
+                <div>I</div>
+                <div>J</div>
+            </div>
+
+            <div class="gridThreeContainer">
+                <div class="xAxisMain">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                </div>    
+                <div class="mainRadarGrid">
+                    <div id="A1" class="gridThree"></div>
+                    <div id="A2" class="gridThree"></div>
+                    <div id="A3" class="gridThree"></div>
+                    <div id="A4" class="gridThree"></div>
+                    <div id="A5" class="gridThree"></div>
+                    <div id="A6" class="gridThree"></div>
+                    <div id="A7" class="gridThree"></div>
+                    <div id="A8" class="gridThree"></div>
+                    <div id="A9" class="gridThree"></div>
+                    <div id="A10" class="gridThree"></div>
+                    <div id="B1" class="gridThree"></div>
+                    <div id="B2" class="gridThree"></div>
+                    <div id="B3" class="gridThree"></div>
+                    <div id="B4" class="gridThree"></div>
+                    <div id="B5" class="gridThree"></div>
+                    <div id="B6" class="gridThree"></div>
+                    <div id="B7" class="gridThree"></div>
+                    <div id="B8" class="gridThree"></div>
+                    <div id="B9" class="gridThree"></div>
+                    <div id="B10" class="gridThree"></div>
+                    <div id="C1" class="gridThree"></div>
+                    <div id="C2" class="gridThree"></div>
+                    <div id="C3" class="gridThree"></div>
+                    <div id="C4" class="gridThree"></div>
+                    <div id="C5" class="gridThree"></div>
+                    <div id="C6" class="gridThree"></div>
+                    <div id="C7" class="gridThree"></div>
+                    <div id="C8" class="gridThree"></div>
+                    <div id="C9" class="gridThree"></div>
+                    <div id="C10" class="gridThree"></div>
+                    <div id="D1" class="gridThree"></div>
+                    <div id="D2" class="gridThree"></div>
+                    <div id="D3" class="gridThree"></div>
+                    <div id="D4" class="gridThree"></div>
+                    <div id="D5" class="gridThree"></div>
+                    <div id="D6" class="gridThree"></div>
+                    <div id="D7" class="gridThree"></div>
+                    <div id="D8" class="gridThree"></div>
+                    <div id="D9" class="gridThree"></div>
+                    <div id="D10" class="gridThree"></div>
+                    <div id="E1" class="gridThree"></div>
+                    <div id="E2" class="gridThree"></div>
+                    <div id="E3" class="gridThree"></div>
+                    <div id="E4" class="gridThree"></div>
+                    <div id="E5" class="gridThree"></div>
+                    <div id="E6" class="gridThree"></div>
+                    <div id="E7" class="gridThree"></div>
+                    <div id="E8" class="gridThree"></div>
+                    <div id="E9" class="gridThree"></div>
+                    <div id="E10" class="gridThree"></div>
+                    <div id="F1" class="gridThree"></div>
+                    <div id="F2" class="gridThree"></div>
+                    <div id="F3" class="gridThree"></div>
+                    <div id="F4" class="gridThree"></div>
+                    <div id="F5" class="gridThree"></div>
+                    <div id="F6" class="gridThree"></div>
+                    <div id="F7" class="gridThree"></div>
+                    <div id="F8" class="gridThree"></div>
+                    <div id="F9" class="gridThree"></div>
+                    <div id="F10" class="gridThree"></div>
+                    <div id="G1" class="gridThree"></div>
+                    <div id="G2" class="gridThree"></div>
+                    <div id="G3" class="gridThree"></div>
+                    <div id="G4" class="gridThree"></div>
+                    <div id="G5" class="gridThree"></div>
+                    <div id="G6" class="gridThree"></div>
+                    <div id="G7" class="gridThree"></div>
+                    <div id="G8" class="gridThree"></div>
+                    <div id="G9" class="gridThree"></div>
+                    <div id="G10" class="gridThree"></div>
+                    <div id="H1" class="gridThree"></div>
+                    <div id="H2" class="gridThree"></div>
+                    <div id="H3" class="gridThree"></div>
+                    <div id="H4" class="gridThree"></div>
+                    <div id="H5" class="gridThree"></div>
+                    <div id="H6" class="gridThree"></div>
+                    <div id="H7" class="gridThree"></div>
+                    <div id="H8" class="gridThree"></div>
+                    <div id="H9" class="gridThree"></div>
+                    <div id="H10" class="gridThree"></div>
+                    <div id="I1" class="gridThree"></div>
+                    <div id="I2" class="gridThree"></div>
+                    <div id="I3" class="gridThree"></div>
+                    <div id="I4" class="gridThree"></div>
+                    <div id="I5" class="gridThree"></div>
+                    <div id="I6" class="gridThree"></div>
+                    <div id="I7" class="gridThree"></div>
+                    <div id="I8" class="gridThree"></div>
+                    <div id="I9" class="gridThree"></div>
+                    <div id="I10" class="gridThree"></div>
+                    <div id="J1" class="gridThree"></div>
+                    <div id="J2" class="gridThree"></div>
+                    <div id="J3" class="gridThree"></div>
+                    <div id="J4" class="gridThree"></div>
+                    <div id="J5" class="gridThree"></div>
+                    <div id="J6" class="gridThree"></div>
+                    <div id="J7" class="gridThree"></div>
+                    <div id="J8" class="gridThree"></div>
+                    <div id="J9" class="gridThree"></div>
+                    <div id="J10" class="gridThree"></div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="backgroundBlur"></div>
+
+    <div class="shipSunk">
+        <h1 class="sunkShipText"></h1>
+        <img class="sunkShipImg" src="" alt="">
+    </div>
+
+    <div class="gameOver">
+        <h1 class="announceWinner"></h1>
+        <button class="playAgain">PLAY AGAIN</button>
+    </div>
+    
     <script src="main.js"></script>
 </body>
 </html>

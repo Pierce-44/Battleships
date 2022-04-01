@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -21,10 +21,12 @@
   },
   "homepage": "https://github.com/Pierce-44/Battleships#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
     "eslint": "^8.12.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.5.1",
     "prettier": "2.6.1",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
